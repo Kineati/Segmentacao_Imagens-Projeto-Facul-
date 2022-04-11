@@ -146,14 +146,19 @@ void draw() {
       aux9.pixels[pos] = img9.pixels[pos];
     }
   }
+  image(aux3, 0, 0);
+  save("FlorBinariaNormal_Brilho.png");
+  
+  image(aux9, 0, 0);
+  save("FlorBinariaOriginal.png");
   //Fim - Brilho
   
   //Comparacao
   int cont1 = 0;
   int cont2 = 0;
   int cont3 = 0;
-  PImage img6 = loadImage("C:\\Users\\Thiago\\Desktop\\Faculdade\\7 Semestre\\Computação Grafica e Processamento de Imagens\\Projeto\\Filtros\\Brilho\\FlorBinariaOrginal_Brilho.png");
-  PImage img7 = loadImage("C:\\Users\\Thiago\\Desktop\\Faculdade\\7 Semestre\\Computação Grafica e Processamento de Imagens\\Projeto\\Filtros\\Brilho\\FlorBinariaNormal_Brilho.png");
+  PImage img6 = loadImage("FlorBinariaOriginal.png");
+  PImage img7 = loadImage("FlorBinariaNormal_Brilho.png");
   PImage aux4 = createImage(img6.width, img6.height, RGB);
   PImage aux5 = createImage(img7.width, img7.height, RGB);
   PImage aux6 = createImage(width, height, RGB);
@@ -251,12 +256,6 @@ void draw() {
   
   image(aux2, 0, 0);
   save("FlorBinaria_Mediana.png");
-  
-  image(aux3, 0, 0);
-  save("FlorBinariaNormal_Brilho.png");
-  
-  image(aux9, 0, 0);
-  save("FlorBinariaOriginal.png");
   //Fim - Comparacao
   
   //Segmentacao
